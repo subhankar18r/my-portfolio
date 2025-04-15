@@ -10,15 +10,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col row-start-2 items-center sm:items-start px-5">
+      <main className="row-start-2 flex min-h-screen flex-col items-center justify-center px-4 pb-16 md:px-6">
         <About />
         <Skills />
         <ExperienceSection />
         <Projects />
         <Contact />
-        <Footer />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
+      <Footer />
     </>
   );
 }

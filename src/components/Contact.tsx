@@ -1,95 +1,108 @@
 import {
   FaDiscord,
   FaFacebook,
+  FaGithub,
   FaInstagram,
   FaLinkedin,
   FaTelegramPlane,
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-12">
-      <h2 className="text-4xl font-bold text-center mb-8 text-gray-200">
+    <section id="contact" className="w-full scroll-mt-16">
+      <h2 className="mb-6 text-center text-4xl font-bold text-gray-200">
         Contact
       </h2>
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8 px-4">
-        <div className="left w-full md:w-1/2  p-6 rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold mb-4 text-gray-200">
+      <div className="flex flex-col items-start justify-center gap-8 md:flex-row">
+        <div className="left w-full rounded-lg shadow-md md:w-1/2">
+          <h3 className="mb-4 text-2xl font-semibold text-gray-200">
             Do you have a Project to discuss?
           </h3>
           <div className="mb-6">
             <h2 className="text-lg font-bold text-gray-200">EMAIL</h2>
-            <p className="text-gray-200">subhankar18r@gmail.com</p>
+            <a
+              href="mailto:subhankar18r@gmail.com"
+              className="text-blue-500 hover:underline"
+            >
+              subhankar18r@gmail.com
+            </a>
           </div>
           <div>
-            <h2 className="text-lg font-bold text-gray-200 mb-2">
+            <h2 className="mb-2 text-lg font-bold text-gray-200">
               SOCIAL MEDIA
             </h2>
-            <div className="flex gap-4 text-gray-600 text-2xl">
-              <FaLinkedin className="hover:text-blue-700 cursor-pointer" />
-              <FaWhatsapp className="hover:text-green-500 cursor-pointer" />
-              <FaSquareXTwitter className="hover:text-blue-500 cursor-pointer" />
-              <FaDiscord className="hover:text-indigo-500 cursor-pointer" />
-              <FaInstagram className="hover:text-pink-500 cursor-pointer" />
-              <FaFacebook className="hover:text-blue-600 cursor-pointer" />
-              <FaTelegramPlane className="hover:text-blue-400 cursor-pointer" />
+            <div className="flex flex-wrap justify-center gap-4 text-2xl text-gray-600">
+              <a
+                href="https://www.linkedin.com/in/subhankar18r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-blue-700 md:hover:text-blue-700"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://wa.me/919064099578"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-green-500 md:hover:text-green-500"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="https://x.com/subhankar18r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-blue-500 md:hover:text-blue-500"
+              >
+                <FaSquareXTwitter />
+              </a>
+              <a
+                href="https://discord.gg/rtWZjKcF"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-indigo-500 md:hover:text-indigo-500"
+              >
+                <FaDiscord />
+              </a>
+              <a
+                href="https://www.instagram.com/subhankar18r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-pink-500 md:hover:text-pink-500"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61569845498879"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-blue-600 md:hover:text-blue-600"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://t.me/subhankar18r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-blue-400 md:hover:text-blue-400"
+              >
+                <FaTelegramPlane />
+              </a>
+              <a
+                href="https://github.com/subhankar18r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-gray-500 md:hover:text-gray-500"
+              >
+                <FaGithub />
+              </a>
             </div>
           </div>
         </div>
-        <div className="right w-full md:w-1/2  p-6 rounded-lg shadow-md">
-          <form action="" method="post" className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-200 mb-1"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-200 mb-1"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-200 mb-1"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
-            >
-              Send
-            </button>
-          </form>
-        </div>
+        <ContactForm />
       </div>
     </section>
   );

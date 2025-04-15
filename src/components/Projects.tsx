@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 interface Project {
   name: string;
   description: string;
-  tecknologies: string[];
+  techStack: string[];
   image: string;
   visitUrl: string;
   sourceUrl: string;
@@ -27,29 +27,32 @@ export default async function Projects() {
   const projects = await getProjects();
 
   return (
-    <section className="py-4">
-      <h2 className="text-4xl font-bold text-center mb-6">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section id="projects" className="scroll-mt-16 py-4">
+      <h2 className="mb-6 text-center text-4xl font-bold">Projects</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md">
+          <div
+            key={index}
+            className="max-w-80 rounded-lg bg-gray-800 p-4 shadow-md"
+          >
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-48 object-cover rounded-md mb-4"
+              className="mb-4 h-48 w-full rounded-md object-cover"
             />
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-gray-400">{project.description}</p>
-            <div className="flex gap-2 mt-2 flex-wrap">
-              {project.tecknologies.map((tech, techIndex) => (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {project.techStack.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="px-2 py-1 bg-gray-700 rounded-md text-sm"
+                  className="rounded-md bg-gray-700 px-2 py-1 text-sm"
                 >
                   {tech}
                 </span>
               ))}
             </div>
-            <div className="flex gap-4 mt-4">
+            <div className="mt-4 flex gap-4">
               <a
                 href={project.visitUrl}
                 target="_blank"

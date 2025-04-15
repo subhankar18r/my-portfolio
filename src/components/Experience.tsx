@@ -14,31 +14,31 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className=" text-white py-4">
+    <section id="experience" className="scroll-mt-16 py-4 text-white">
       <div className="mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-6">Experience</h2>
+        <h2 className="mb-6 text-center text-4xl font-bold">Experience</h2>
 
         <div className="relative">
           {/* Vertical Line */}
-          <div className=" md:block absolute left-1/2 top-0 h-full w-1 bg-blue-500 transform -translate-x-1/2 z-0" />
+          <div className="absolute top-0 left-1/2 z-0 h-full w-1 -translate-x-1/2 transform bg-blue-500 md:block" />
 
           {timeline.map((item, index) => (
             <div
               key={item.id}
-              className={`relative flex flex-col md:flex-row items-center justify-between ${
+              className={`relative flex flex-col items-center justify-between md:flex-row ${
                 index === timeline.length - 1 ? "mb-6" : "mb-16"
               } ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
             >
               {/* Timeline Content */}
-              <div className="md:w-5/12 z-10">
-                <div className="bg-blue-500 px-4 py-3 rounded-md font-semibold text-black shadow-md">
+              <div className="z-10 md:w-5/12">
+                <div className="rounded-md bg-blue-500 px-4 py-3 font-semibold text-black shadow-md">
                   {item.title}
                 </div>
-                <p className="text-sm mt-2 text-gray-300">{item.date}</p>
+                <p className="mt-2 text-sm text-gray-300">{item.date}</p>
               </div>
 
               {/* Circle */}
-              <div className="w-12 h-12 bg-blue-500 text-black font-bold hidden md:flex items-center justify-center rounded-full border-4 border-black z-20"></div>
+              <div className="z-20 hidden h-12 w-12 items-center justify-center rounded-full border-4 border-black bg-blue-500 font-bold text-black md:flex"></div>
 
               {/* Empty side for spacing */}
               <div className="hidden md:block md:w-5/12" />
