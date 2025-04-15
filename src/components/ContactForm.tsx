@@ -37,6 +37,7 @@ export default function ContactForm() {
       toast.error("Failed to send message. Please try other ways to contact.", {
         duration: 5000,
       });
+      console.error("Error sending message:", error);
     } finally {
       form.reset(); // ✅ Reset form here
       setLoading(false);

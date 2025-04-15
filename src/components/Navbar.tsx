@@ -1,5 +1,6 @@
 "use client";
 import { Sling as Hamburger } from "hamburger-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -37,7 +38,7 @@ const Navbar: React.FC = () => {
       <nav className="fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between px-6 py-4 text-white shadow-md backdrop-blur-md">
         {/* Left Section */}
         <Link href="#about" className="flex items-center space-x-4">
-          <img
+          <Image
             src="/favicon.ico"
             alt="Profile"
             className="mr-1 h-10 w-10 rounded-full object-cover"

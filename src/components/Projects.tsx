@@ -1,4 +1,5 @@
 import { headers } from "next/headers";
+import Image from "next/image";
 
 interface Project {
   name: string;
@@ -35,7 +36,7 @@ export default async function Projects() {
             key={index}
             className="max-w-80 rounded-lg bg-gray-800 p-4 shadow-md"
           >
-            <img
+            <Image
               src={project.image}
               alt={project.name}
               className="mb-4 h-48 w-full rounded-md object-cover"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -34,7 +35,7 @@ export default function About() {
           </Link>
         </div>
       </div>
-      <img
+      <Image
         src="/profile.jpg"
         alt="Profile"
         className="right h-48 w-48 rounded-full border-4 border-[#06B6D4] object-cover md:h-64 md:w-64"
