@@ -9,22 +9,22 @@ const Navbar: React.FC = () => {
     return (
       <>
         <li className="transition-colors hover:text-gray-300">
-          <Link href="#skills" onClick={(e) => setIsOpen(false)}>
+          <Link href="#skills" onClick={() => setIsOpen(false)}>
             Skills
           </Link>
         </li>
         <li className="transition-colors hover:text-gray-300">
-          <Link href="#experience" onClick={(e) => setIsOpen(false)}>
+          <Link href="#experience" onClick={() => setIsOpen(false)}>
             Experience
           </Link>
         </li>
         <li className="transition-colors hover:text-gray-300">
-          <Link href="#projects" onClick={(e) => setIsOpen(false)}>
+          <Link href="#projects" onClick={() => setIsOpen(false)}>
             Projects
           </Link>
         </li>
         <li className="transition-colors hover:text-gray-300">
-          <Link href="#contact" onClick={(e) => setIsOpen(false)}>
+          <Link href="#contact" onClick={() => setIsOpen(false)}>
             Contact
           </Link>
         </li>
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         {/* Left Section */}
         <Link href="#about" className="flex items-center space-x-4">
           <img
-            src="/profile.jpg"
+            src="/favicon.ico"
             alt="Profile"
             className="mr-1 h-10 w-10 rounded-full object-cover"
           />
